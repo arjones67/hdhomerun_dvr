@@ -31,3 +31,6 @@ If you want to customize the configuration, you can create a new Docker layer wi
 
 # Source
 https://github.com/arjones67/hdhomerun_dvr
+
+
+Note: HDHomeRun DVR software included in the image is used with permission from Silicon Dust.
