@@ -7,7 +7,7 @@ Docker image for the HDHomeRun Record DVR software.  Also includes Samba with re
 
 # Details
 
-* currently running HDHemeRun Record 20150821atest2 
+* currently running HDHemeRun Record 20150821atest2. I will try to update the image as quickly as possible as updates are released.  Instructions for manually building are in my GitHub repo's wiki.  Manually building will automatically download the newest version of the software. 
 * Your HDHomerun must be activated as documented in the Silicondust Forum. All rules and policies from Silicondust must be followed.
 * Notice the "--net=host".  This is required because I could only get the dvr software to listen on the same IP range used by the container.  For example if the Docker container uses 172.17.x.x but everything on your network is on 192.168.x.x, the dvr software will not be able to discover your HDHomerun hardware.  There is a downside to using "--net=host".  You're basically telling Docker to not containerize the network stack.  I hope to find a workaround in the future.
 * By default the video will be stored within the container.  If you want the video to persist a container being detroyed, mount an external volume at /hdhomerun/video
