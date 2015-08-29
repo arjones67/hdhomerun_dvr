@@ -4,6 +4,6 @@ if [ "$SAMBA" != "false" ] && [ "$SAMBA" != "FALSE" ] && [ "$SAMBA" != "off" ] &
 	echo "Samba enabled" > /tmp/samba_status.txt
 	/usr/sbin/smbd -D -d1 --option=workgroup=${workgroup:-workgroup}
 else
-	echo "Samba disabled > /tmp/samba_status.txt
+	echo "Samba disabled" > /tmp/samba_status.txt
 fi
-/hdhomerun/bin/hdhomerun_record_linux_20150821atest2 foreground --conf /hdhomerun/etc/hdhomerun.conf
+/hdhomerun/bin/hdhomerun_record_linux foreground --conf /hdhomerun/etc/hdhomerun.conf
